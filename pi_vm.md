@@ -2,7 +2,7 @@
 ## Lite versions
 It's a quicker install, possible by using `QEMU` and the GUI with `virt-manager`: [guide here](https://dominoc925.blogspot.com/2021/10/use-virtual-machine-manager-to-create.html?m=1&fbclid=IwAR3yQbdF_bnP6fzOiW6xfRYmljqlz7nJudSjZU1mtfdOpljL30-A0p_cskg).
 
-Use the `-display none` parameter CLI-based OS such as the lite version of Raspberry Pi OS.
+Use the `-display none` parameter with CLI-based OS such as the lite versions of `Raspberry Pi OS`.
 
 ## Desktop versions
 
