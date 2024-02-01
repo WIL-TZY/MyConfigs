@@ -88,7 +88,10 @@ sudo userdel <username>
 - **Change the current directory**: `cd`
 - **Print the current working directory**: `pwd`
 - **Create a new directory**: `mkdir`
-- **Remove files and directories**: `rm`
+- **Remove files**: `rm` 
+obs: this only work for empty directories.
+To remove a folder with all files inside it recursively, use `sudo rm -r` instead.
+- **Remove directories**: `rmdir` 
 - **Copy files and directories**: `cp`
 - **Move or rename files and directories**: `mv`
 - **Create an empty file or update timestamp**: `touch`

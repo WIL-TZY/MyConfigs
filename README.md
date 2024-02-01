@@ -7,7 +7,7 @@ This repository is organized to provide me easy access to scripts, virtual machi
 ## Repository Structure
 
 ### `/`
-The root of this repository is reserved for the markdown file, there to assist with each subsequent folder.
+The root of this repository is reserved for the markdown files, there to assist with each subsequent folder.
 
 ### `/scripts`
 The `scripts` folder contains a variety of shell scripts and batch files that I find useful for different tasks.
@@ -21,6 +21,8 @@ I've organized specific folders for various software, making it easy to find con
 - **`/software/vim`**: Configurations and scripts related to the Vim text editor.
 
 - **`/software/samba`**: Files related to Samba configuration and usage.
+
+- **`/software/codeblocks`**: Files related to CodeBlocks configuration and usage.
 
 - **`/software/ssh`**: Scripts and configurations for SSH.
 
