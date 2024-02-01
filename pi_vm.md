@@ -196,7 +196,39 @@ And then you will drop into the `Raspberry Pi OS`’s terminal.
 
 > You can get the root shell by simply typing `sudo bash` on the command prompt of the guest machine.
 
-That's it! `Raspberry Pi OS` VM was successfully installed using QEMU :D
+That's it! `Raspberry Pi OS` VM was successfully installed using `QEMU`.
+
+## Resizing the SD card size
+
+With all this done to successfully start   `QEMU`, we’ll hit the next problem: the size of the SD card (which hosts the OS and the files in the home-directory of the pi user) would be ridiculously small — about 1.6GB, and most of this is already used up by the base system!
+
+So, we will have to now increase the size of the card so that any useful work can be done with this emulated Rpi.
+
+Now. create a file `/etc/udev/rules.d/90-qemu.rules` in the guest Raspberry Pi OS:
+
+```shell
+sudo vi /etc/udev/rules.d/90-qemu.rules
+```
+
+Add these contents in the file:
+
+```
+KERNEL=="sda", SYMLINK+="mmcblk0"
+KERNEL=="sda?", SYMLINK+="mmcblk0p%n"
+KERNEL=="sda2", SYMLINK+="root"
+```
+
+Now, shutdown `QEMU` — `sudo shutdown -h now` — and restart it again with the command-line as above.
+
+After QEMU has gotten back, log into it as pi again, and start `raspi-config` as root:
+
+```shell
+sudo raspi-config
+```
+
+In the curses-window that shows up, select `Advanced Options` and then `Expand Filesystem`.
+
+This will expand the filesystem to fill up the original image size of about 8GB. After resizing, you will have to reboot `QEMU` to use all the expanded space.
 
 ---
 > `Obs:` This guide written in markdown is an adaptation of this [Medium post](https://blog.ramdoot.in/emulating-raspberry-pi-on-with-qemu-951283daf2bd#83ca).
