@@ -1,0 +1,21 @@
+# Jekyll Site Settings
+
+# Base URL (for sites hosted at a subdirectory, e.g., username.github.io/repository)
+# Uncomment and set the baseurl if the site is not at the root of the domain
+baseurl: "/"
+#url: ""
+
+# Theme
+#theme: jekyll-theme-minimal
+
+# Navigation Links
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /Contact
+
+# Prettify the URL automatically (removes the .html extension)
+permalink: pretty
